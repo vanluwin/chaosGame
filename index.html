@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Chaos Game</title>
+
+        <!-- Bootstrap -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- Arquivos do fremeworl P5.js -->
+        <script
+            language="javascript"
+            type="text/javascript"
+            src="libraries/p5.js"
+        ></script>
+        <script
+            language="javascript"
+            type="text/javascript"
+            src="libraries/p5.dom.js"
+        ></script>
+
+        <!-- Arquivos desenvolvidos -->
+        <script
+            language="javascript"
+            type="text/javascript"
+            src="chaosGame.js"
+        ></script>
+        
+    </head>
+
+    <style>
+        body {
+            background-color: #ebe3e3;
+        }
+        #canvasDiv {
+            width: 520px;
+            height: 500px;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center">Chaos Game</h1>
+            <div class="row">
+                <div class="card col-sm">
+                    <div class="card-header text-center">Game settings</div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"
+                                    >Seed Points</span
+                                >
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="seedPointsNumber"
+                                placeholder="Number of starting points"
+                            />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    Points per iteration
+                                </span
+                                >
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="pointsPerIteration"
+                                placeholder="Number of points added each iteration"
+                            />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"
+                                    >Restart every</span
+                                >
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="restartFrame"
+                                placeholder="n-th"
+                            />
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">frame</span>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            id="setBtn"
+                            class="btn btn-outline-success"
+                        >
+                            Set
+                        </button>
+                        <button
+                            type="button"
+                            id="resetBtn"
+                            class="btn btn-outline-danger"
+                        >
+                            Reset
+                        </button>
+
+                        </br></br>
+
+                        <button 
+                            type="button" 
+                            class="btn btn-outline-primary"
+                            id="sierpinskiBtn"
+                        >
+                            Sierpinski Triangle
+                        </button>
+                        </br></br>
+                        <button 
+                            type="button" 
+                            class="btn btn-outline-primary"
+                            id="pentagonBtn"
+                        >
+                            Pentagon Fractal
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-sm"><div id="canvasDiv"></div></div>
+            </div>
+        </div>
+    </body>
+
+    <script
+        language="javascript"
+        type="text/javascript"
+        src="interface.js"
+    ></script>
+</html>
